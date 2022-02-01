@@ -1,0 +1,31 @@
+<template>
+    
+   <lightning-card title="Get Record Details From Type">
+     <div class=slds-var-m-around_medium>
+        <lightning-input type="text" label="Name" placeholder="Type Name" onkeyup={handleType}>
+
+        </lightning-input> 
+        <div class="slds-var-m-top_medium">
+         <lightning-button class="slds-var-p-top_medium" label="Search"
+          variant="brand" onclick={handleClick}>
+         </lightning-button>
+        </div>
+     </div>
+     <template if:true={records}>
+      <div class="slds-var-m-top_medium">
+         <template for:each={records} for:item="rec">
+            <div class="slds-var-m-around_small" key={rec.id}>
+               <p><strong>Student Name-</strong>{rec.Name}</p>
+               <p><strong>Student Roll No-</strong>{rec.RollNo__c}</p>
+               <p><strong>Student Phone No-</strong>{rec.Phone__c}</p>
+               <p><strong>Student Branch-</strong>{rec.Branch__c}</p>
+ 
+            </div> 
+         </template> 
+      </div>  
+     </template>
+     <template if:true={isnull}>
+        <strong class="slds-var-m-left_small">Sorry!!! No Record Found</strong>
+     </template>
+   </lightning-card> 
+</template>

@@ -1,0 +1,16 @@
+<template>
+
+    <lightning-card title="Progress Bar">
+        <div class="slds-var-m-around_medium">
+            <lightning-input type="number" onkeyup={handlechange}></lightning-input>
+        </div>
+
+
+
+        <div class="slds-var-m-around_medium">
+            <c-child-progress change-progress={changeProgressValue} tracked-value={changeProgressValue}></c-child-progress>
+        </div>
+
+    </lightning-card>
+
+</template>
