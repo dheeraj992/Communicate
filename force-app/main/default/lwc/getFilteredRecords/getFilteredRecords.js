@@ -1,4 +1,4 @@
-import { LightningElement,wire } from 'lwc';
+import { LightningElement } from 'lwc';
 import QueryRecords from '@salesforce/apex/QueryRecordsFromType.QueryRecords';
 export default class GetFilteredRecords extends LightningElement {
 
@@ -20,7 +20,5 @@ export default class GetFilteredRecords extends LightningElement {
         })
     }
 
-   /* @wire(QueryRecords,{type:'$SelectedType'})
-    records*/
-
+   
 }
